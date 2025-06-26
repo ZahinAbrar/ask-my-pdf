@@ -1,3 +1,4 @@
+
 # 📄 PDF-RAG FastAPI
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
@@ -31,3 +32,84 @@
 ├── sample_pdfs/             # Folder to hold uploaded PDFs
 ├── requirements.txt
 ├── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+### 🔧 Setup (Local/Colab)
+
+1. Clone the repo:
+```bash
+git clone https://github.com/your-username/pdf-rag-fastapi.git
+cd pdf-rag-fastapi
+```
+
+2. Install requirements:
+```bash
+pip install -r requirements.txt
+```
+
+3. Run the FastAPI server:
+```bash
+uvicorn app.main:app --reload
+```
+
+---
+
+## 📤 API Usage
+
+### 🔗 Endpoint: `/query`
+
+- **Method:** `POST`
+- **Payload:**
+```json
+{
+  "pdf_path": "sample_pdfs/Graphical_Lasso.pdf",
+  "query": "What is the main idea of the document?"
+}
+```
+
+- **Response:**
+```json
+{
+  "answer": "The document discusses Graphical Lasso for sparse inverse covariance estimation..."
+}
+```
+
+---
+
+## 📚 Example Use Cases
+
+- Research paper Q&A
+- Legal document summarization
+- Financial report interpretation
+- Automating knowledge extraction from manuals
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Please open an issue or submit a PR with improvements, bug fixes, or ideas for enhancements.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+---
+
+## ✨ Acknowledgements
+
+Built using:
+- [FastAPI](https://fastapi.tiangolo.com/)
+- [LlamaIndex](https://github.com/jerryjliu/llama_index)
+- [HuggingFace Transformers](https://huggingface.co/)
+
+---
+
+## 🌍 Let's Build RAG Apps for Everyone
+
+> If you find this helpful, feel free to ⭐ the repo and share it!
